@@ -189,6 +189,72 @@
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
 
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .project-card {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid #eee;
+        }
+
+        .project-info {
+            padding: 15px;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin: 10px 0;
+        }
+
+        .project-tag {
+            background: #e0e0e0;
+            padding: 3px 8px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+        }
+
+        .project-links {
+            margin-top: 15px;
+        }
+
+        .project-link {
+            display: inline-block;
+            padding: 5px 15px;
+            background: #3498db;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .project-link:hover {
+            background: #2980b9;
+        }
+
         /* Hobbies Section */
         .hobbies-grid {
             display: grid;
@@ -412,6 +478,7 @@
 
         <div class="tabs">
             <div class="tab active" data-tab="home">Home</div>
+            <div class="tab" data-tab="projects">Projects</div>
             <div class="tab" data-tab="hobbies">Hobbies</div>
             <div class="tab" data-tab="skills">Skills</div>
             <div class="tab" data-tab="education">Education</div>
@@ -425,17 +492,69 @@
             <div class="home-content">
                 <h2 class="welcome-text">Welcome to My Portfolio!</h2>
                 <p class="intro">
-                   
-                </p>Hi, I'm Nikhil Jaiswal, a passionate and curious Mechanical Engineering student at MIT College of Alandi. I'm always eager to explore how emerging technologies can shape the future — whether it's through hands-on mechanical innovation or cutting-edge fields like quantum computing and electric vehicles. I enjoy blending creativity with technical knowledge to solve real-world problems, and I'm constantly learning and growing with each project I take on.
+                    Hi, I'm Nikhil Jaiswal, a passionate and curious Mechanical Engineering student at MIT College of Alandi. I'm always eager to explore how emerging technologies can shape the future — whether it's through hands-on mechanical innovation or cutting-edge fields like quantum computing and electric vehicles. I enjoy blending creativity with technical knowledge to solve real-world problems, and I'm constantly learning and growing with each project I take on.
+                </p>
                 <p class="intro">
                     Eyes on the stars, feet on the ground,
                     A mind that wonders, always unbound.
                     With every sunrise, I seek to know,
                     Where thoughts may wander, I will go.”
                     
-                    Driven by this spirit, I dive into new ideas, explore advanced tech like quantum computing, and strive to be part of the future that’s being built today
+                    Driven by this spirit, I dive into new ideas, explore advanced tech like quantum computing, and strive to be part of the future that's being built today
                 </p>
                 <a href="#" class="explore-btn" id="explore-btn">Explore My Portfolio</a>
+            </div>
+        </div>
+
+        <!-- Projects Tab Content -->
+        <div id="projects" class="tab-content">
+            <h2>My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="screenshot.jpg" alt="Portfolio Website" class="project-img">
+                    <div class="project-info">
+                        <h3>Portfolio Website</h3>
+                        <p>A responsive personal portfolio website built with HTML, CSS.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">View Live</a>
+                            <a href="#" class="project-link">Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="project.jpg" alt="Temperature Converter" class="project-img">
+                    <div class="project-info">
+                        <h3>AutoCad Model</h3>
+                        <p>We Group of four made a project name multifunctionality board uses in power distribution like separate compartments for batteries and others items.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">View Live</a>
+                            <a href="#" class="project-link">Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="Drone.jpg" alt="Calculator App" class="project-img">
+                    <div class="project-info">
+                        <h3>Drone Model</h3>
+                        <p>We group fo 3 making a drone model attachment rotating camera regarding CT Lab project.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">View Live</a>
+                            <a href="#" class="project-link">Code</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -501,8 +620,18 @@
                     </div>
                     <div class="skill">
                         <div class="skill-name">
-                            <span>JavaScript</span>
-                            <span>5%</span>
+                            <span>AutoCad</span>
+                            <span>71%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>  
+                            </div>
+                        </div>
+                        <div class="skill">
+                        <div class="skill-name">
+                            <span>Fusion-360</span>
+                            <span>78%</span>
+
                         </div>
                         <div class="skill-bar">
                             <div class="skill-progress" style="width: 50%"></div>
@@ -658,8 +787,8 @@
             tabContents.forEach(content => content.classList.remove('active'));
             
             // Activate hobbies tab
-            document.querySelector('.tab[data-tab="hobbies"]').classList.add('active');
-            document.getElementById('hobbies').classList.add('active');
+            document.querySelector('.tab[data-tab="projects"]').classList.add('active');
+            document.getElementById('projects').classList.add('active');
             
             // Smooth scroll to tabs
             document.querySelector('.tabs').scrollIntoView({ behavior: 'smooth' });
